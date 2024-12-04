@@ -3,12 +3,38 @@ import networkx as nx
 
 class SteinerTriple(Scene):
     def construct(self):
+        # create a graph with nine nodes
         graph = nx.Graph()
         graph.add_nodes_from([1,2,3,4,5,6,7,8,9])
+        # get the positions of the nodes
+        circular_pos = nx.circular_layout(graph, dim=3, scale=2.5)
 
-        manim_graph = Graph.from_networkx(graph, layout="circular", layout_scale=2)
+        vertex_list = []
+        for v in graph.nodes:
+            c = Circle(radius=0.15, color=WHITE, fill_opacity=1)
+            c.move_to(circular_pos[v])
+            vertex_list.append(c)
         
-        self.play(Create(manim_graph))
-        self.play(manim_graph.animate.add_edges((1,2),(2,3),(3,1)))
-        self.play(manim_graph.animate.add_edges((4,5), (5,6), (6,4)))
+        verts = VGroup(*vertex_list)
+        self.play(Create(verts))
+
+        edge_to_add = [(1,2),(2,3),(3,1)]
+        edge_list = []
+        for e in edge_to_add:
+            p1 = circular_pos[e[0]]
+            p2 = circular_pos[e[1]]
+            l = Line(p1, p2, color=BLUE_E)
+            edge_list.append(l)
+
+        edges = VGroup(*edge_list)
+        edges.set_z_index(vertex_list[0].z_index-1)
+
+        self.play(Create(edges))
+        self.wait()
+        self.add(edges.copy())
+        self.play(Rotate(edges, angle=2*PI/3, about_point=ORIGIN, rate_func=smooth))
+        self.wait()
+        self.add(edges.copy())
+        self.play(Rotate(edges, angle=2*PI/3, about_point=ORIGIN, rate_func=smooth))
+
         self.wait()

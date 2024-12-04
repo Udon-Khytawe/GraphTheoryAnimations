@@ -1,5 +1,8 @@
 # This file is used internally by FFMPEG.
-file 'file:/home/ethan/Programs/Python/GraphTheoryAnimations/media/videos/SteinerTriple/1080p60/partial_movie_files/SteinerTriple/3529212410_1965622867_223132457.mp4'
-file 'file:/home/ethan/Programs/Python/GraphTheoryAnimations/media/videos/SteinerTriple/1080p60/partial_movie_files/SteinerTriple/3040924799_4199524943_1785863152.mp4'
-file 'file:/home/ethan/Programs/Python/GraphTheoryAnimations/media/videos/SteinerTriple/1080p60/partial_movie_files/SteinerTriple/3040924799_2413483081_1785863152.mp4'
-file 'file:/home/ethan/Programs/Python/GraphTheoryAnimations/media/videos/SteinerTriple/1080p60/partial_movie_files/SteinerTriple/3040924799_1704852926_3842245093.mp4'
+file 'file:/home/ethan/Programs/Python/GraphTheoryAnimations/media/videos/SteinerTriple/1080p60/partial_movie_files/SteinerTriple/3529212410_1923761893_223132457.mp4'
+file 'file:/home/ethan/Programs/Python/GraphTheoryAnimations/media/videos/SteinerTriple/1080p60/partial_movie_files/SteinerTriple/3040924799_3223083732_630365408.mp4'
+file 'file:/home/ethan/Programs/Python/GraphTheoryAnimations/media/videos/SteinerTriple/1080p60/partial_movie_files/SteinerTriple/3040924799_1704852926_2712338228.mp4'
+file 'file:/home/ethan/Programs/Python/GraphTheoryAnimations/media/videos/SteinerTriple/1080p60/partial_movie_files/SteinerTriple/3040924799_705933315_2884436173.mp4'
+file 'file:/home/ethan/Programs/Python/GraphTheoryAnimations/media/videos/SteinerTriple/1080p60/partial_movie_files/SteinerTriple/3040924799_1704852926_155895238.mp4'
+file 'file:/home/ethan/Programs/Python/GraphTheoryAnimations/media/videos/SteinerTriple/1080p60/partial_movie_files/SteinerTriple/3040924799_1439203964_2331197533.mp4'
+file 'file:/home/ethan/Programs/Python/GraphTheoryAnimations/media/videos/SteinerTriple/1080p60/partial_movie_files/SteinerTriple/3040924799_1704852926_1591714389.mp4'
