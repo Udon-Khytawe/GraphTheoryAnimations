@@ -18,23 +18,31 @@ class SteinerTriple(Scene):
         verts = VGroup(*vertex_list)
         self.play(Create(verts))
 
-        edge_to_add = [(1,2),(2,3),(3,1)]
-        edge_list = []
-        for e in edge_to_add:
-            p1 = circular_pos[e[0]]
-            p2 = circular_pos[e[1]]
-            l = Line(p1, p2, color=BLUE_E)
-            edge_list.append(l)
+        def rotate_add_edges(edge_to_add, vertex_pos, z_index, color, angle, num_rotations, about_point):
+            edge_list = [] 
+            for e in edge_to_add:
+                p1 = vertex_pos[e[0]]
+                p2 = vertex_pos[e[1]]
+                l = Line(p1, p2, color=color)
+                edge_list.append(l)
 
-        edges = VGroup(*edge_list)
-        edges.set_z_index(vertex_list[0].z_index-1)
+            edges = VGroup(*edge_list)
+            edges.set_z_index(z_index)
 
-        self.play(Create(edges))
-        self.wait()
-        self.add(edges.copy())
-        self.play(Rotate(edges, angle=2*PI/3, about_point=ORIGIN, rate_func=smooth))
-        self.wait()
-        self.add(edges.copy())
-        self.play(Rotate(edges, angle=2*PI/3, about_point=ORIGIN, rate_func=smooth))
+            self.play(Create(edges, run_time=0.75))
+            self.wait()
 
-        self.wait()
+            edge_copy = edges.copy()
+            for n in range(num_rotations):
+                self.play(Rotate(edge_copy, angle=angle, about_point=about_point, rate_func=smooth))
+                edges.add(edge_copy)
+                edge_copy = edge_copy.copy()
+                self.wait(0.5)
+
+            return edges
+
+        # first set of edges
+        rotate_add_edges([(1,2),(2,3),(3,1)], circular_pos, vertex_list[0].z_index-1, BLUE_E, 2*PI/3, 2, ORIGIN)
+        rotate_add_edges([(3,4),(4,8),(8,3)], circular_pos, vertex_list[0].z_index-1, GREEN_E, 2*PI/3, 2, ORIGIN)
+        rotate_add_edges([(3,6),(6,9),(9,3)], circular_pos, vertex_list[0].z_index-1, YELLOW_E, 2*PI/9, 2, ORIGIN)
+        rotate_add_edges([(1,6),(6,8),(8,1)], circular_pos, vertex_list[0].z_index-1, MAROON_C, 2*PI/3, 2, ORIGIN)
