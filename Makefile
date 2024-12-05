@@ -1,3 +1,3 @@
 
 % : %.py
-	manim -pql $^ $@
+	manim -pqh $^ $@
