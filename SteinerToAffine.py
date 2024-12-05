@@ -133,10 +133,8 @@ class SteinerToAffine(Scene):
         graph.remove_edges(*edges)
         graph.add_edges(*edges, edge_config=master_edge_config)
 
-        self.play(Transform(graph_old, graph))
+        self.play(Transform(graph_old, graph),subcaption_duration=0.2)
         self.remove(graph_old)
-
-
 
         # become an affine plane
         self.play(graph[2].animate.move_to([-2,2,0]), 
