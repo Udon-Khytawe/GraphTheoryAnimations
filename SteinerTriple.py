@@ -42,7 +42,7 @@ class SteinerTriple(Scene):
             return edges
 
         # first set of edges
-        rotate_add_edges([(1,2),(2,3),(3,1)], circular_pos, vertex_list[0].z_index-1, BLUE_E, 2*PI/3, 2, ORIGIN)
-        rotate_add_edges([(3,4),(4,8),(8,3)], circular_pos, vertex_list[0].z_index-1, GREEN_E, 2*PI/3, 2, ORIGIN)
-        rotate_add_edges([(3,6),(6,9),(9,3)], circular_pos, vertex_list[0].z_index-1, YELLOW_E, 2*PI/9, 2, ORIGIN)
-        rotate_add_edges([(1,6),(6,8),(8,1)], circular_pos, vertex_list[0].z_index-1, MAROON_C, 2*PI/3, 2, ORIGIN)
+        partition_one = rotate_add_edges([(1,2),(2,3),(3,1)], circular_pos, vertex_list[0].z_index-1, BLUE_E, 2*PI/3, 2, ORIGIN)
+        partition_two = rotate_add_edges([(3,4),(4,8),(8,3)], circular_pos, vertex_list[0].z_index-1, GREEN_E, 2*PI/3, 2, ORIGIN)
+        partition_three = rotate_add_edges([(3,6),(6,9),(9,3)], circular_pos, vertex_list[0].z_index-1, YELLOW_E, 2*PI/9, 2, ORIGIN)
+        partition_four = rotate_add_edges([(1,6),(6,8),(8,1)], circular_pos, vertex_list[0].z_index-1, MAROON_C, 2*PI/3, 2, ORIGIN)

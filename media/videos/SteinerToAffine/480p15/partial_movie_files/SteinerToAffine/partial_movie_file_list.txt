@@ -1,0 +1,5 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/ethan/Programs/Python/GraphTheoryAnimations/media/videos/SteinerToAffine/480p15/partial_movie_files/SteinerToAffine/1185818338_1923761893_223132457.mp4'
+file 'file:/home/ethan/Programs/Python/GraphTheoryAnimations/media/videos/SteinerToAffine/480p15/partial_movie_files/SteinerToAffine/624642324_1704852926_2585316500.mp4'
+file 'file:/home/ethan/Programs/Python/GraphTheoryAnimations/media/videos/SteinerToAffine/480p15/partial_movie_files/SteinerToAffine/624642324_4169702800_3736441363.mp4'
+file 'file:/home/ethan/Programs/Python/GraphTheoryAnimations/media/videos/SteinerToAffine/480p15/partial_movie_files/SteinerToAffine/624642324_1704852926_2293695567.mp4'
